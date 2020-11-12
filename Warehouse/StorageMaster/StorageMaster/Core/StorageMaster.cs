@@ -6,72 +6,72 @@ namespace StorageMaster.Core
 {
     class StorageMaster
     {
-        Vehicle currentVehicle;
+        private Vehicle currentVehicle;
         private List<Storage> storages;     // the storage registry list
         private List<Product> productPool; //the product list in the pool of a storage
 
 
-        //public string AddProduct(string type, double price)
-        //{
-        //    //creating new Product
-        //    Product newProduct;
+        public string AddProduct(string type, double price)
+        {
+            //creating new Product
+            Product newProduct;
 
-        //    if (type == "Ram")  //if the parameter "type" is Ram
-        //    {
-        //        newProduct = new Ram();  // we create new Ram 
-        //        newProduct.Price = price;   //assign new price to Ram
-        //        productPool.Add(newProduct);    //add the new Ram to the pool of products
-        //        return $"Added {type} to pool"; //print out the result
-        //    }
-        //    else if (type == "Gpu") //if the parameter type is Gpu and similar on the else if methods comming below
-        //    {
-        //        newProduct = new Gpu();
-        //        newProduct.Price = price;
-        //        productPool.Add(newProduct);
-        //        return $"Added {type} to pool";
-        //    }
-        //    else if (type == "HardDrive")
-        //    {
-        //        newProduct = new HardDrive();
-        //        newProduct.Price = price;
-        //        productPool.Add(newProduct);
-        //        return $"Added {type} to pool";
-        //    }
-        //    else if (type == "SolidstateDrive")
-        //    {
-        //        newProduct = new SolidStateDrive();
-        //        newProduct.Price = price;
-        //        productPool.Add(newProduct);
-        //        return $"Added {type} to pool";
-        //    }
-        //    //when no matches with the "type" parameter with the is statements
-        //    throw new NotImplementedException("Invalid product type!");
-        //}
+            if (type == "Ram")  //if the parameter "type" is Ram
+            {
+                newProduct = new Ram();  // we create new Ram 
+                newProduct.Price = price;   //assign new price to Ram
+                productPool.Add(newProduct);    //add the new Ram to the pool of products
+                return $"Added {type} to pool"; //print out the result
+            }
+            else if (type == "Gpu") //if the parameter type is Gpu and similar on the else if methods comming below
+            {
+                newProduct = new Gpu();
+                newProduct.Price = price;
+                productPool.Add(newProduct);
+                return $"Added {type} to pool";
+            }
+            else if (type == "HardDrive")
+            {
+                newProduct = new HardDrive();
+                newProduct.Price = price;
+                productPool.Add(newProduct);
+                return $"Added {type} to pool";
+            }
+            else if (type == "SolidstateDrive")
+            {
+                newProduct = new SolidStateDrive();
+                newProduct.Price = price;
+                productPool.Add(newProduct);
+                return $"Added {type} to pool";
+            }
+            //when no matches with the "type" parameter with the is statements
+            throw new NotImplementedException("Invalid product type!");
+        }
 
-        //public string RegisterStorage(string type, string name)
-        //{
-        //    //Creating new newStorage variable of Storage class 
-        //    Storage newStorage; //
-        //    if (type == "AutomatedWarehouse")   //when the type is AutomatedWarehouse..
-        //    {
-        //        newStorage = new AutomatedWarehouse(name);  //Creating new AutomatedWarehouse with that name
-        //        storages.Add(newStorage);   //We add the new AutomatedWarhouse to the storages list
-        //        return $"Registred {name}"; //we print out the new AutoWarehouse name that is added.
-        //    }
-        //    else if (type == "DistributionCenter")
-        //    {
-        //        newStorage = new DistributionCenter(name);
-        //        storages.Add(newStorage);
-        //        return $"Registred {name}";
-        //    }
-        //    else if (type == "Warehouse")
-        //    {
-        //        newStorage = new Warehouse(name);
-        //        storages.Add(newStorage);
-        //        return $"Registred {name}";
-        //    }
-        //    throw new NotImplementedException("Invalide storage type!");
-        //}
+        public string RegisterStorage(string type, string name)
+        {
+            //Creating new newStorage variable of Storage class 
+            Storage newStorage; //
+            if (type == "AutomatedWarehouse")   //when the type is AutomatedWarehouse..
+            {
+                newStorage = new AutomatedWarehouse(name);  //Creating new AutomatedWarehouse with that name
+                storages.Add(newStorage);   //We add the new AutomatedWarhouse to the storages list
+                return $"Registred {name}"; //we print out the new AutoWarehouse name that is added.
+            }
+            else if (type == "DistributionCenter")
+            {
+                newStorage = new DistributionCenter(name);
+                storages.Add(newStorage);
+                return $"Registred {name}";
+            }
+            else if (type == "Warehouse")
+            {
+                newStorage = new Warehouse(name);
+                storages.Add(newStorage);
+                return $"Registred {name}";
+            }
+            throw new NotImplementedException("Invalide storage type!");
+        }
 
         /*If the vehicle is found at the given garageSlot then the following method select the vehicle and return the type of the vehicle 
          * If the vehicle is not found then the function return no vehicle is selected*/
@@ -161,55 +161,57 @@ namespace StorageMaster.Core
             return $"nothing unloaded at {storageName}"; // in case that there has been nothing unloaded
         }
 
-        //public string GetStorageStatus(string storageName)
-        //{
-        //    string result = "";
+        public string GetStorageStatus(string storageName)
+        {
+            string result = "";
 
-        //    for (int i = 0; i < storages.Count; i++) // goes thru the list of all storages
-        //    {
-        //        if (storageName == storages.ElementAt<Storage>(i).Name) // checks the one with the right name
-        //        {
-        //            Storage storage = storages.ElementAt<Storage>(i); // gets a reference to the storage
+            for (int i = 0; i < storages.Count; i++) // goes thru the list of all storages
+            {
+                if (storageName == storages.ElementAt<Storage>(i).Name) // checks the one with the right name
+                {
+                    Storage storage = storages.ElementAt<Storage>(i); // gets a reference to the storage
 
-        //            result = $"Stock ({storage.Weight}/{storage.Capacity}) ["; // gets the total weight and capacity and put it into result
+                    result = $"Stock ({storage.Weight}/{storage.Capacity}) ["; // gets the total weight and capacity and put it into result
 
-        //            //This section is ment to get a list of products and count them
-        //            List<Product> products = storage.Products().ToList<Product>();
-        //            var prod =
-        //                from product in products
-        //                group product by product.GetType() into productType // MISSING ORDER BY Type
-        //                select new
-        //                {
-        //                    type = productType.Key,
-        //                    count = productType.Count()
-        //                };
+                    //This section is ment to get a list of products and count them
+                    List<Product> products = storage.Products().ToList<Product>();
+                    var prod =
+                        from product in products
+                        orderby product.GetType().Name
+                        group product by product.GetType().Name into productType
+                        select new
+                        {
+                            type = productType.Key,
+                            count = productType.Count()
+                        };
 
-        //            int j;
-        //            for (j = 0; j < prod.Count() - 1; j++)
-        //            {
-        //                result = result + prod.ElementAt(j).type + " " + prod.ElementAt(j).count + ", ";
-        //            }
-        //            result = result + prod.ElementAt(j).type + " " + prod.ElementAt(j).count + "]\n"; // the last element goes without a ,
+                    int j;
+                    for (j = 0; j < prod.Count() - 1; j++)
+                    {
+                        result = result + prod.ElementAt(j).type + " " + prod.ElementAt(j).count + ", ";
+                    }
+                    result = result + prod.ElementAt(j).type + " " + prod.ElementAt(j).count + "]\n"; // the last element goes without a ,
 
-        //            result = result + "Garage: [";
-        //            List<Vehicle> garage = new List<Vehicle>(storage.Garage());
-        //            for (j = 0; j < garage.Count; j++)
-        //            {
-        //                Vehicle vehicle = garage.ElementAt<Vehicle>(j);
-        //                if (vehicle != null)
-        //                    result = result + vehicle.GetType();
-        //                else
-        //                    result = result + "empty";
-        //                if (j < garage.Count - 1) // the last element isn't followed by a pipe
-        //                    result = result + "|";
-        //            }
-        //            result = result + "]";
+                    result = result + "Garage: [";
+                    List<Vehicle> garage = new List<Vehicle>(storage.Garage());
+                    for (j = 0; j < garage.Count; j++)
+                    {
+                        Vehicle vehicle = garage.ElementAt<Vehicle>(j);
+                        if (vehicle != null)
+                            result = result + vehicle.GetType().Name;
+                        else
+                            result = result + "empty";
+                        if (j < garage.Count - 1) // the last element isn't followed by a pipe
+                            result = result + "|";
+                    }
+                    result = result + "]";
 
-        //            break; // comes out of the for, after processing the found storage
-        //        }
-        //    }
-        //    return result;
-        //}
+                    break; // comes out of the for, after processing the found storage
+                }
+            }
+
+            return result;
+        }
 
         public string GetSummary()
         {
