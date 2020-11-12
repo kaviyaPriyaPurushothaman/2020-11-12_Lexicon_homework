@@ -1,0 +1,13 @@
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\bin\Debug\netcoreapp3.1\StorageMaster.exe
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\bin\Debug\netcoreapp3.1\StorageMaster.deps.json
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\bin\Debug\netcoreapp3.1\StorageMaster.runtimeconfig.json
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\bin\Debug\netcoreapp3.1\StorageMaster.runtimeconfig.dev.json
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\bin\Debug\netcoreapp3.1\StorageMaster.dll
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\bin\Debug\netcoreapp3.1\StorageMaster.pdb
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\obj\Debug\netcoreapp3.1\StorageMaster.csprojAssemblyReference.cache
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\obj\Debug\netcoreapp3.1\StorageMaster.AssemblyInfoInputs.cache
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\obj\Debug\netcoreapp3.1\StorageMaster.AssemblyInfo.cs
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\obj\Debug\netcoreapp3.1\StorageMaster.csproj.CoreCompileInputs.cache
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\obj\Debug\netcoreapp3.1\StorageMaster.dll
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\obj\Debug\netcoreapp3.1\StorageMaster.pdb
+D:\Kaviya_Exercise\dotnet\Exam\Warehouse\StorageMaster\StorageMaster\obj\Debug\netcoreapp3.1\StorageMaster.genruntimeconfig.cache
